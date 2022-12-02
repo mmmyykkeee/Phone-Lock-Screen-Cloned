@@ -11,6 +11,7 @@
   background-color: #7ab9f0;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .phone{
@@ -20,6 +21,8 @@
   border-radius: 30px;
   padding: 10px 10px 15px 10px;
   background-color: #2e2b2b;
+  position: relative;
+  box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.655);
 }
 
 .screen{
@@ -122,6 +125,7 @@
   position: absolute;
   bottom: 15px;
   color: #fff;
+  cursor: pointer;
 }
   .battery{
     position: absolute;
@@ -215,20 +219,9 @@
   }
   .text-container .animate {
     position: relative;
-    -webkit-animation: leftright 15s infinite ease-in-out;
-            animation: leftright 15s infinite ease-in-out;
+    animation: leftright 8s infinite ease-in-out;
   }
   
-  @-webkit-keyframes leftright {
-    0%, 20% {
-      transform: translateX(0%);
-      left: 0%;
-    }
-    80%, 100% {
-      transform: translateX(-100%);
-      left: -10%;
-    }
-  }
   
   @keyframes leftright {
     0%, 20% {
@@ -237,7 +230,7 @@
     }
     80%, 100% {
       transform: translateX(-100%);
-      left: -10%;
+      left: -18%;
     }
   }
   .fader {
@@ -260,4 +253,54 @@
       width: 100%;
       padding: 20px;
     }
-  }/*# sourceMappingURL=animate.css.map */
+  }
+
+  .volume-up, .volume-down,.poweron,.poweroff{
+    height: 50px;
+    width: 10px;
+    background-color: inherit;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .volume-up{
+    position: absolute;
+    right: -5px;
+    top: 90px;
+  }
+
+  .volume-down{
+    position: absolute;
+    right: -5px;
+    top: 145px;
+  }
+
+  .poweron{
+    position: absolute;
+    right: -5px;
+    top: 220px;
+  }
+
+  .poweroff{
+    position: absolute;
+    right: -5px;
+    top: 220px;
+  }
+
+  .pattern{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .dot{
+    border: 15px solid white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 30px;
+  }

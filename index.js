@@ -13,3 +13,26 @@ let text1 = document.querySelector("#one span");
 if (container1.clientWidth < text1.clientWidth) {
   text1.classList.add("animate");
 }
+
+let screenState = document.querySelector('.screen').style.opacity = '0'
+document.querySelector('.poweroff').style.display = 'none'
+document.querySelector('.pattern').style.visibility = 'hidden';
+
+function screenOn(){
+  document.querySelector('.screen').style.opacity = '1';
+  document.querySelector('.poweroff').style.display = 'block'
+}
+
+function screenOff(){
+  document.querySelector('.screen').style.opacity = '0';
+  document.querySelector('.poweron').style.display = 'block';
+  document.querySelector('.poweroff').style.display = 'none';
+}
+
+function displayPattern(){
+  document.querySelector('.pattern').style.visibility = 'visible';
+  const unlock = document.querySelector('.unlock').textContent = 'Draw your Pattern';
+  setTimeout(() => {
+    document.querySelector('.screen').style.opacity = '.3'
+  }, "10000");
+}
