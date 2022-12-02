@@ -33,6 +33,6 @@ function displayPattern(){
   document.querySelector('.pattern').style.visibility = 'visible';
   const unlock = document.querySelector('.unlock').textContent = 'Draw your Pattern';
   setTimeout(() => {
-    document.querySelector('.screen').style.opacity = '.3'
+    document.querySelector('.screen').style.opacity = '0'
   }, "10000");
 }
