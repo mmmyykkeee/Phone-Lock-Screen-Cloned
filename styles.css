@@ -1,0 +1,263 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7ab9f0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.phone{
+  height: 800px;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 10px 10px 15px 10px;
+  background-color: #2e2b2b;
+}
+
+.screen{
+  position: relative;
+  height: 780px;
+  width: 380px;
+  border: 1px solid;
+  border-radius: 25px;
+  background-color: #fff;
+  background-image: url(./Images/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.camera{
+  width: 25px;
+  height: 25px;
+  border: 10px solid #291e1e;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 5px;
+}
+
+.time{
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: .7em;
+  color: #fff;
+  font-size: 3.8em;
+  font-weight: 800;
+  }
+
+  .date{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    color: #fff;
+    top: 5.6em;
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+
+  .camera1{
+    width: 25px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .shutter{
+    position: absolute;
+    background-color: #fff;
+    width: 20px;
+    height: 10px;
+    top: -4px;
+    left: 1px;
+    border-radius: 3px;
+    z-index: -1;
+  }
+
+  .lens{
+    border-radius: 50%;
+    border: 2px solid;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 3px;
+  }
+
+  .location{
+    width: 28px;
+    height: 28px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .precise{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+  }
+.unlock{
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+}
+  .battery{
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    background-color: #fff;
+    border: 2px solid white;
+    border-radius: 4px;
+    top: 4px;
+    right: 15px;
+    font-size: 8px;
+  }
+
+  .bat-tip{
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    right: -4px;
+    top: 2px;
+  }
+
+  .wifi{
+    position: absolute;
+    width: 20px;
+    right: 20px;
+  }
+  .wifi img{
+    width: 100%;
+    position: absolute;
+    right: 20px;
+  }
+
+  .cellular{
+    position: absolute;
+    width: 40px;
+   right: 63px;
+    display: flex;
+  }
+
+  .cellular img{
+    color: #fff;
+    width: 50%;
+  }
+
+  .mute{
+    width: 30px;
+    position: absolute;
+    left: 150px;
+    top: 3px;
+  }
+
+  .mute img{
+    width: 80%;
+  }
+
+  .dnd{
+    position: absolute;
+    width: 30px;
+    left: 120px;
+  }
+
+  .dnd img{
+    width: 80%;
+  }
+
+  .cellular-name{
+    position: absolute;
+    left: 13px;
+    top: 5px;
+    color: #fff;
+  }
+
+
+  #one {
+    width: 50%;
+  }
+    
+  .text-container {
+    padding: 1px 10px;
+    font-size: 1rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+  }
+  .text-container span {
+    display: inline-block;
+  }
+  .text-container .animate {
+    position: relative;
+    -webkit-animation: leftright 15s infinite ease-in-out;
+            animation: leftright 15s infinite ease-in-out;
+  }
+  
+  @-webkit-keyframes leftright {
+    0%, 20% {
+      transform: translateX(0%);
+      left: 0%;
+    }
+    80%, 100% {
+      transform: translateX(-100%);
+      left: -10%;
+    }
+  }
+  
+  @keyframes leftright {
+    0%, 20% {
+      transform: translateX(0%);
+      left: 0%;
+    }
+    80%, 100% {
+      transform: translateX(-100%);
+      left: -10%;
+    }
+  }
+  .fader {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 25px;
+  }
+  .fader.fader-left {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  }
+  .fader.fader-right {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  }
+  
+  @media (max-width: 450px) {
+    .center {
+      width: 100%;
+      padding: 20px;
+    }
+  }/*# sourceMappingURL=animate.css.map */
